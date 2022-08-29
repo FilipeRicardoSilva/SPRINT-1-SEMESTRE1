@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PIZZARIA DOIS IRMÃOS</h1>
+
+    Informar nome da Empresa:
+    <input id='input_empresa'type='text'> <br>
+    Informar Produção média anual
+    <input id='input_sorvete'type='number'> <br>
+    Informar Quantas Filias possui
+    <input id='input_unidades'type='number'> <br>
+    Quantos Representantes possui ? 
+    <input id='input_representante'type='number'> <br>
+    <br>
+    <button onclick ='Calcular()'>Ver Gastos e ganhos</button>
+
+    <span id = 'texto'></span>
+
+   <b> <div id='div_resultado'> </b>
+        
+    </div>
+</html>
+
+
+<script>
+    function Calcular() {
+
+        var custo= (Number(input_sorvete.value)*3.12 )
+
+        var lucro = custo - (Number(input_sorvete.value) * 12,8);
+
+        var perda = lucro * 0.72;
+
+        var representante = (Number (input_sorvete.value)/ (Number(input_representante.value)))
+
+        div_resultado.innerHTML =
+
+        ` Sem a SMART ICE 
+
+Sua Empresa
+${input_empresa.value} Produz anualmente :
+${input_sorvete.value} de sorvete ${input_unidades.value} unidades
+esse produto foi distribuido para ${input_representante.value} representantes 
+Gerando
+
+${custo} Custo de Produção
+${representante} Litros por Representante
+MÉDIA DE PERDA DO PRODUTO FINAL POR DESREGULAÇÃO TÉRMICA 
+
+     5% No periodo de armazenamento 
+     8% Durante transporte do produto 
+     15% Do produto em varejo
+
+ Você PERDEU aproximadamente 28% do seu produto final, seu lucro final é de R$ ${perda}
+
+
+ Com a SMART ICE 
+
+ Você consegue evitar o descarte desnecessário do seu produto
+
+ ganhando até 30% mais, nas mesmas condições do seu processo atual 
+
+ ${custo} Custo de Produção
+${representante} Litros por Representante
+Seu lucro final com a tecnologia SMART ICE ${lucro}`
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+</script>
